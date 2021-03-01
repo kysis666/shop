@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-container {
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.col1,
+.col2 {
+    width: 100%;
+    height: 40vw;
+    margin: 20px;
+}
+
+.col1 {
+    background-image: url(assets/1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.col2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-top,
+.right-bot {
+    width: 100%;
+    height: 50%;
+}
+
+.right-top {
+    background-image: url(assets/2.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 40px;
+}
+
+.right-bot {
+    display: flex;
+}
+
+.right-bot-left,
+.right-bot-right {
+    width: 100%;
+    height: 100%;
+}
+
+.right-bot-left {
+    background-image: url(assets/3.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.right-bot-right {
+    background-image: url(assets/4.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-left: 20px;
+}
+
+.col1,
+.right-top,
+.right-bot-left,
+.right-bot-right {
+    display: flex;
+    align-items: right;
+    cursor: pointer;
+    position: relative;
+}
+
+h1 {
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+    margin: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+
+h1:after {
+    content: '';
+    display: block;
+    width: 2px;
+    background: black;
+    height: 7vh;
+}
+
+
+
+/*HOVER TOP*/
+.col1:hover,
+.right-top:hover,
+.right-bot-left:hover,
+.right-bot-right:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col1:hover h1,
+.right-top:hover h1,
+.right-bot-left:hover h1,
+.right-bot-right:hover h1 {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    color: white;
+    background: rgba(0, 0, 0, .65);
+    border-radius: 15px;
+    height: 25%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col1:hover h1:after,
+.right-top:hover h1:after,
+.right-bot-left:hover h1:after,
+.right-bot-right:hover h1:after {
+    opacity: 0;
+}
+
+.col1:before,
+.right-top:before,
+.right-bot-left:before,
+.right-bot-right:before {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.col1:after,
+.right-top:after,
+.right-bot-left:after,
+.right-bot-right:after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 0;
+    right: 0;
+}
+
+.col1:hover:before,
+.right-top:hover:before {
+    height: 100%;
+    width: 37vw;
+    border: 4px solid black;
+    border-right: none;
+    border-bottom: none;
+    transition: height .2s linear, width .2s linear .2s;
+}
+
+.col1:hover:after,
+.right-top:hover:after {
+    height: 100%;
+    width: 37vw;
+    border: 4px solid black;
+    border-left: none;
+    border-top: none;
+    transition: height .2s linear, width .2s linear .2s;
+}
+
+.right-bot-left:hover:before,
+.right-bot-right:hover:before {
+    height: 100%;
+    width: 17vw;
+    border: 4px solid black;
+    border-right: none;
+    border-bottom: none;
+    transition: height .2s linear, width .2s linear .2s;
+}
+
+.right-bot-left:hover:after,
+.right-bot-right:hover:after {
+    height: 100%;
+    width: 17vw;
+    border: 4px solid black;
+    border-left: none;
+    border-top: none;
+    transition: height .2s linear, width .2s linear .2s;
+}
