@@ -1,0 +1,1 @@
+document.getElementById("column-sale").innerHTML += '<h3>Sale!</h3>';
